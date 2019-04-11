@@ -1,0 +1,20 @@
+.header {
+    height: 70px;
+    background-color: peru;
+    margin: 0px !important;
+    padding: 0px !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100% !important;
+}
+
+.link-navbar {
+    color: #f3f7fa !important;
+    text-decoration: none;
+}
+
+.link-navbar:hover {
+    color: rgb(183, 186, 189) !important;
+}
