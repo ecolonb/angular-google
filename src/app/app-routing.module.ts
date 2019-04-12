@@ -6,6 +6,7 @@ import { PagesComponent } from './pages/pages.component';
 import { AuthGuard } from './guards/auth.guard';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { ProfileComponent } from './pages/auth/profile/profile.component';
+import { GraphComponent } from './pages/auth/graph/graph.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -15,7 +16,12 @@ const routes: Routes = [
     path: 'profile',
     canActivate: [AuthGuard],
     component: ProfileComponent
+  }, {
+    path: 'graphs',
+    canActivate: [AuthGuard],
+    component: GraphComponent
   },
+  
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     path: 'pagenotfound',

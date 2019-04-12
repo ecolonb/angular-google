@@ -24,14 +24,15 @@ export class HeaderComponent implements OnInit {
         this.loginService.logOut();
         break;
       case 'profile':
-        this.router.navigate(['auth', 'profile']);
+        this.router.navigate(['profile']);
         break;
       case 'root':
-        this.router.navigate(['admin']);
+        this.router.navigate(['profile']);
         break;
-      case 'users':
-        this.router.navigate(['admin', 'users']);
+        case 'graphs':
+        this.router.navigate([ 'graphs']);
         break;
+        
       default:
         break;
     }

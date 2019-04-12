@@ -14,6 +14,7 @@ import {
   MatDialogModule
 } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
+import { GraphComponent } from './auth/graph/graph.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     HeaderComponent,
     AuthComponent,
-    ProfileComponent
+    ProfileComponent,
+    GraphComponent
   ],
   exports: [AuthComponent, LoginComponent, HeaderComponent, ProfileComponent],
   imports: [

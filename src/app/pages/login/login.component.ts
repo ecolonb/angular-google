@@ -66,8 +66,8 @@ export class LoginComponent implements OnInit {
     evt.preventDefault();
     this.showSpinner = true;
     let { username, password } = formLogin;
-    username = username.value.trim();
-    password = password.value.trim();
+    username = username.value.trim().toLowerCase();
+    password = password.value.trim().toLowerCase();
 
     if (username === '' || password === '') {
       this.alerts.errorAlert(
@@ -79,6 +79,7 @@ export class LoginComponent implements OnInit {
         username,
         password
       };
+
       this.loginService
         .loginUserAndPassword(loginData)
         .then(response => {
@@ -87,10 +88,10 @@ export class LoginComponent implements OnInit {
         })
         .catch(err => {
           this.showSpinner = false;
-          this.alerts.errorAlert('Error al iniciar sesión, ¿Es correcta la informción?');
+          this.alerts.errorAlert(
+            'Error al iniciar sesión, ¿Es correcta la informción?'
+          );
         });
     }
-
-    // this.loginService.setAuth(true);
   }
 }

@@ -2,11 +2,11 @@
     <div class="card">
         <h5 class="card-header text-center">Perfil de usuario</h5>
         <div class="card-body">
-          
+
             <h5 class="card-title text-center">{{userService.userProfile.name ? userService.userProfile.name + ' ' + userService.userProfile.lastname : '-'}}</h5>
 
             <div class="img-profile">
-                <img [src]="userService.userProfile.img" alt="" style="max-height:200px;" />  
+                <img [src]="userService.userProfile.img" alt="" style="max-height:200px;" />
             </div>
             <p class="card-text">Email: {{userService.userProfile.email}}</p>
         </div>

@@ -17,7 +17,7 @@ export class AppComponent {
           if (!newState) {
             this.router.navigate(['login'], { replaceUrl: true });
           } else {
-            this.router.navigate(['profile'], { replaceUrl: true });
+            this.router.navigate(['graphs'], { replaceUrl: true });
           }
         });
       })

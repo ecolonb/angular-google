@@ -2,7 +2,17 @@
     <a class="navbar-brand" href="#">GoogleSignIn</a>
     <div class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
         <div *ngIf="loginService.isAuth()" id="navbarSupportedContent">
-            <a class="link-navbar" href="#" (click)="action('logout', $event)">Salir </a>
+            <ul class="list-inline list-menu">
+                <li class="list-inline-item">
+                    <a class="link-navbar" href="#" (click)="action('graphs', $event)">Gráficas </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="link-navbar" href="#" (click)="action('profile', $event)">Perfil </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="link-navbar" href="#" (click)="action('logout', $event)">Salir </a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
